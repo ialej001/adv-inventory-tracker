@@ -1,0 +1,74 @@
+import java.text.*;
+import javax.swing.Icon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.border.LineBorder;
+import javax.swing.border.TitledBorder;
+
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.GridLayout;
+import java.awt.event.ActionListener;
+import javax.swing.SwingConstants;
+
+class Main {
+  public static void main(String[] args) {
+    Calculator calculator = new Calculator();
+    calculator.setSize(800,600);
+    calculator.setLocationRelativeTo(null);
+    calculator.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    calculator.setVisible(true);
+  }
+}
+
+class Calculator extends JFrame {
+  JFrame calculator = new JFrame();
+  JPanel input = new JPanel();
+  JButton add = new JButton("+");
+  JButton subtract = new JButton("-");
+  JButton equals = new JButton("=");
+  JButton multiply = new JButton("*");
+  JButton divide = new JButton("/");
+  JButton decimal = new JButton(".");
+  JLabel results = new JLabel();
+
+  JButton one = new JButton("1");
+  JButton two = new JButton("2");
+  JButton three = new JButton("3");
+  JButton four = new JButton("4");
+  JButton five = new JButton("5");
+  JButton six = new JButton("6");
+  JButton seven = new JButton("7");
+  JButton eight = new JButton("8");
+  JButton nine = new JButton("9");
+  JButton zero = new JButton("0");
+
+  Calculator() {
+    calculator.setLayout(new GridLayout(1,2));
+
+    input.add(one);
+    input.add(two);
+    input.add(three);
+    input.add(multiply);
+    input.add(four);
+    input.add(five);
+    input.add(six);
+    input.add(divide);
+    input.add(seven);
+    input.add(eight);
+    input.add(nine);
+    input.add(add);
+    input.add(decimal);
+    input.add(zero);
+    input.add(equals);
+    input.add(subtract);
+
+    calculator.add(results);
+    calculator.add(input);
+
+    
+  }
+}
+
